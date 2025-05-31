@@ -1,0 +1,17 @@
+<p-dialog header="Crear turno" [modal]="true" [(visible)]="showModal" [style]="{ width: '25rem' }">
+    <form>
+        <span class="p-text-secondary block mb-8">
+            Selecciona un turno y uno o varios grupos o empleados.
+        </span>
+
+        <app-drop-down-turns></app-drop-down-turns>
+        <br>
+        <app-drop-down-groups></app-drop-down-groups>
+        <br><br>
+        <app-user-drop-down></app-user-drop-down>
+        <br><br>
+        <div class="flex justify-end gap-2 mt-5">
+            <p-button label="Save" (click)="saveEvent()"></p-button>
+        </div>
+    </form>
+</p-dialog>

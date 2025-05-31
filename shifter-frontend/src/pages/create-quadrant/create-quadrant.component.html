@@ -1,0 +1,16 @@
+<app-logo></app-logo>
+<div>
+    <h1>Crer Cuadrante</h1>
+    <!-- <p>Fecha de inicio: {{initDate}}</p>
+    <p>Fecha de fin: {{endDate}}</p> -->
+</div>
+
+<p-button label='{{initDate}}-{{endDate}}' variant="text" [raised]="true" />
+
+<!-- Calendario de FullCalendar -->
+<app-calendar [initDate]="initDate" [endDate]="endDate" (dateSelected)="onDateSelected($event)" ></app-calendar>
+<app-add-calendar-event></app-add-calendar-event>
+
+<div class="card flex justify-center gap-4">
+    <p-button label="Generar Cuadrante" icon="pi pi-check" [loading]="loading" (onClick)="confirmQuadrant()" />
+</div>
