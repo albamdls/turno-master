@@ -4,6 +4,11 @@ package com.shift.shift_planner_backend.groups;
 import com.shift.shift_planner_backend.groups.model.Group;
 import com.shift.shift_planner_backend.groups.model.GroupDTO;
 import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.ArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class GroupService {
@@ -27,5 +32,14 @@ public class GroupService {
         return  GroupMapper.toDTO(saved);
     }
 
+    public List<GroupDTO> findAllDTOs() {
+        Iterable<Group> iterable = groupRepository.findAll();
+        List<Group> groups = new ArrayList<>();
+        iterable.forEach(groups::add);
+        return GroupMapper.toDTOs(groups);
+    }
 
+    public void deleteById(Long id) {
+        groupRepository.deleteById(id);
+    }
 }

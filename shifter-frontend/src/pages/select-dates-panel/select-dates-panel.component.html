@@ -4,15 +4,14 @@
             Introduce un rango de fechas
         </span>
 
-        <p-floatlabel class="flex items-center gap-4 mt-5">
-            <label for="initDate" class="font-semibold w-24">Init Date</label>
-            <input pInputText id="initDate" formControlName="initDate" type="date" class="flex-auto" />
-        </p-floatlabel>
-
-        <p-floatlabel class="flex items-center gap-4 mt-5">
-            <label for="endDate" class="font-semibold w-24">End Date</label>
-            <input pInputText id="endDate" formControlName="endDate" type="date" class="flex-auto" />
-        </p-floatlabel>
+        <div class="form-group">
+            <label for="initDate" class="section-label">Fecha inicio</label>
+            <input pInputText id="initDate" formControlName="initDate" type="date" class="w-full" [min]="today" />
+        </div>
+        <div class="form-group">
+            <label for="endDate" class="section-label">Fecha fin</label>
+            <input pInputText id="endDate" formControlName="endDate" type="date" class="w-full" [min]="minEndDate" />
+        </div>
 
         <div class="flex justify-end gap-2 mt-5">
             <p-button label="Generar cuadrante" (click)="generateQuadrant()"></p-button>

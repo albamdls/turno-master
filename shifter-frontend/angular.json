@@ -27,7 +27,10 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/primeicons/primeicons.css",
+              "src/styles.css",
+              "src/styles/theme-custom.css",
+              "src/styles/dialog-form.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",

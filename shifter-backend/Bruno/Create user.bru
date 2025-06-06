@@ -1,0 +1,24 @@
+meta {
+  name: Create user
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{HOST}}/api/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": null,
+    "name": "qwer",
+    "lastName": "Polo",
+    "dni": "dni",
+    "email": "345",
+    "companyName": "Shifter",
+    "GroupId": 3,
+    "isAdmin": false
+  }
+}

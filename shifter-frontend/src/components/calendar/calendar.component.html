@@ -1,5 +1,4 @@
 <div class='demo-app'>
-
     <div class='demo-app-main'>
         <full-calendar *ngIf='calendarVisible()' [options]='calendarOptions()'>
             <ng-template #eventContent let-arg>
@@ -7,6 +6,7 @@
                 <i>{{ arg.event.title }}</i>
             </ng-template>
         </full-calendar>
+        <app-add-calendar-event #addEventDialog (eventSaved)="addEvent($event)"></app-add-calendar-event>
+        <app-turn #turnDialog (turnSaved)="onTurnDialogSaved($event)"></app-turn>
     </div>
-
 </div>
