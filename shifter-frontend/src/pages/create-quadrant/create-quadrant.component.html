@@ -1,0 +1,38 @@
+<div class="quadrant-container">
+    <!-- Header con logo y fechas -->
+    <header class="quadrant-header">
+        <div class="header-logo">
+            <app-logo></app-logo>
+        </div>
+        <div class="header-dates">
+            <span class="date-range">{{ formatDateDMY(initDate) }} - {{ formatDateDMY(endDate) }}</span>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Botones de acción -->
+        <div class="action-buttons">
+            <div class="button-group">
+                <p-button label="Generar Cuadrante" icon="pi pi-check" [loading]="loading" (onClick)="confirmQuadrant()"
+                    styleClass="generate-button">
+                </p-button>
+            </div>
+        </div>
+
+        <!-- Calendario -->
+        <div class="calendar-wrapper" id="calendar-capture">
+            <app-calendar
+                [initDate]="initDate"
+                [endDate]="endDate"
+                (turnSaved)="onTurnSaved($event)"
+            ></app-calendar>
+        </div>
+    </main>
+
+    <!-- Componentes de diálogo -->
+    <app-add-calendar-event #addEventDialog></app-add-calendar-event>
+    <app-create-new-user #createUserComponent></app-create-new-user>
+    <app-user-manager #userManagerComponent></app-user-manager>
+    <app-group #groupComponent></app-group>
+</div>

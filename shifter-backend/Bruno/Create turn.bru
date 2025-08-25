@@ -1,0 +1,24 @@
+meta {
+  name: Create turn
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{HOST}}/api/turn
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "initDate": "2024-07-01",
+    "endDate": "2024-07-01",
+    "userName": "stalin",
+    "initHour": "10:00",
+    "endHour": "16:00",
+    "userId": 25,
+    "groupId": 4
+  }
+  
+}

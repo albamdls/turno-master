@@ -1,0 +1,18 @@
+meta {
+  name: FiltrosTurnos
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:8080/api/turns/filter
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "initDate": "2025-06-01",
+    "endDate": "2025-06-30"
+  }
+}

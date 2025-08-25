@@ -1,0 +1,28 @@
+meta {
+  name: Create user
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{HOST}}/api/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Pedro",
+    "lastName": "García",
+    "dni": "88990011E",
+    "email": "pedro@empresa3.com",
+    "companyName": "Empresa Tres",
+    "isAdmin": false,
+    "groupId": 3
+  }
+  
+  
+  
+  
+  
+}

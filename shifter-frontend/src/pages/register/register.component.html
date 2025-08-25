@@ -1,0 +1,56 @@
+<div class="w-full flex items-center justify-content-center">
+  <div class="login-logo-container">
+    <app-logo></app-logo>
+  </div>
+  <div class="register-container p-6 rounded-lg shadow-lg w-full mt-5">
+    <div class="text-center mb-5">
+      <div class="text-white text-3xl font-semibold mb-3">Crear Cuenta</div>
+      <span class="text-white">¿Ya tienes una cuenta?</span>
+      <a [routerLink]="['/login']" class="text-blue-200 ml-2 underline cursor-pointer">Inicia sesión</a>
+    </div>
+
+    <form [formGroup]="registerForm" class="space-y-5">
+      <p-floatlabel class=" mt-5">
+        <input id="firstName" type="text" formControlName="firstName" pInputText class="w-full "  required="required"/>
+        <label for="firstName">Nombre</label>
+      </p-floatlabel>
+
+      <p-floatlabel class=" mt-5">
+        <input id="lastName" type="text" formControlName="lastName" pInputText class="w-full"  required="required"/>
+        <label for="lastName">Apellidos</label>
+      </p-floatlabel>
+
+      <p-floatlabel class=" mt-5">
+        <input id="dni" type="text" formControlName="dni" pInputText class="w-full"  required="required"/>
+        <label for="dni">DNI</label>
+      </p-floatlabel>
+
+      <p-floatlabel class=" mt-5">
+        <input id="companyName" type="text" formControlName="companyName" pInputText class="w-full"  required="required"/>
+        <label for="companyName">Empresa</label>
+      </p-floatlabel>
+
+      <p-floatlabel class=" mt-5">
+        <input id="email" type="email" formControlName="email" pInputText class="w-full"  required="required"/>
+        <label for="email">Email</label>
+      </p-floatlabel>
+
+      <p-floatlabel class=" mt-5">
+        <input id="confirmEmail" type="email" formControlName="confirmEmail" pInputText class="w-full"  required="required"/>
+        <label for="confirmEmail">Confirma el email</label>
+      </p-floatlabel>
+
+      <p-floatlabel class=" mt-5">
+        <input id="password" type="password" formControlName="password" pInputText class="w-full"  required="required"/>
+        <label for="password">Contraseña</label>
+      </p-floatlabel>
+
+      <p-floatlabel class=" mt-5">
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" pInputText class="w-full" required="required" />
+        <label for="confirmPassword">Confirma la contraseña</label>
+      </p-floatlabel>
+
+      <button pButton type="submit" label="Registrar" icon="pi pi-user" class="w-full mt-5" (click)="onRegister()"></button>
+    </form>
+  </div>
+</div>

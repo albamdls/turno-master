@@ -1,0 +1,54 @@
+<p-dialog header="Crear Usuario" [modal]="true" [(visible)]="showModal" [style]="{ width: '35rem' }">
+    <div class="w-full flex items-center justify-content-center ">
+        <div class="register-container p-6 rounded-lg shadow-lg w-full mt-5">
+            <div class="text-center mb-5">
+            </div>
+            <form [formGroup]="userNormalForm" class="space-y-5">
+                <p-floatlabel class=" mt-5">
+                    <input id="firstName" type="text" formControlName="firstName" pInputText class="w-full " />
+                    <label for="firstName">Nombre: </label>
+                </p-floatlabel>
+
+                <p-floatlabel class=" mt-5">
+                    <input id="lastName" type="text" formControlName="lastName" pInputText class="w-full" />
+                    <label for="lastName">Apellidos: </label>
+                </p-floatlabel>
+
+                <p-floatlabel class=" mt-5">
+                    <input id="dni" type="text" formControlName="dni" pInputText class="w-full" />
+                    <label for="dni">DNI/NIE</label>
+                </p-floatlabel>
+
+                <!-- <p-floatlabel class=" mt-5">
+                    <input id="companyName" type="text" formControlName="companyName" pInputText class="w-full" />
+                    <label for="companyName">Company Name</label>
+                </p-floatlabel> -->
+
+                <p-floatlabel class=" mt-5 mb-5">
+                    <input id="email" type="email" formControlName="email" pInputText class="w-full" />
+                    <label for="email">Correo electrónico: </label>
+                </p-floatlabel>
+
+                <p-float-label class="flex items-center gap-4 mt-5">
+                    <label for="groupName" class="font-semibold w-24">Group Name</label>
+                    <p-dropdown
+                                [options]="groups"
+                                formControlName="groupName"
+                                optionLabel="name"
+                                placeholder="Selecciona un grupo">
+                    </p-dropdown>
+                </p-float-label>
+
+                <br>
+                <p-checkbox formControlName="isAdmin" [binary]="true" id="isAdmin" />
+                <label for="isAdmin" class="ml-2">¿Administrador?</label>
+                <br>
+                <br>
+                <div class="form-actions">
+                  <p-button label="Registrar" icon="pi pi-user" (click)="onRegister()"></p-button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</p-dialog>

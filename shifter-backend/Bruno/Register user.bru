@@ -1,0 +1,24 @@
+meta {
+  name: Register user
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{HOST}}/api/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Pedro",
+    "lastName": "González",
+    "dni": "11223344X",
+    "email": "pedro@empresa.com",
+    "companyName": "Empresa X",
+    "isAdmin": true,
+    "groupId": 1
+  }
+  
+}

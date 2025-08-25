@@ -1,0 +1,12 @@
+<p-dialog header="Crear Grupo" [modal]="true" [(visible)]="showModal" [style]="{ width: '24rem' }">
+  <form [formGroup]="groupForm" class="dialog-form">
+    <div class="form-section">
+      <label class="section-label" for="groupName">Nombre del grupo</label>
+      <div class="group-help-text" [style]="{color: 'grey'}">Escribe el nombre del grupo.</div>
+      <input pInputText id="groupName" formControlName="groupName" class="w-full" required/>
+    </div>
+    <div class="form-actions">
+      <p-button label="Guardar" icon="pi pi-save" (click)="onRegister()"></p-button>
+    </div>
+  </form>
+</p-dialog>
