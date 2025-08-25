@@ -5,11 +5,7 @@
 **TurnoMaster** es una aplicación web para la **gestión de turnos en pequeños y medianos comercios**.  
 El sistema permite administrar horarios, gestionar empleados y generar cuadrantes de trabajo de forma eficiente, optimizando la organización y la comunicación interna entre la empresa y los empleados.  
 
-Este proyecto fue desarrollado como parte de la **Formación en Centros de Trabajo (FCT)** en el **CFGS de Desarrollo de Aplicaciones Web**, utilizando:  
-- **Spring Boot (Java)** para el backend.  
-- **Angular (JavaScript)** para el frontend.  
-- **PostgreSQL** como sistema de base de datos.  
-- **Docker**, **DBeaver** y **Bruno API** como herramientas de apoyo.  
+Este proyecto fue desarrollado como parte de la **Formación en Centros de Trabajo (FCT)** en el **CFGS de Desarrollo de Aplicaciones Web**.
 
 ---
 
